@@ -92,18 +92,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     // Validate input data
     // ...
-var_dump($sql,$stmt,$result);die;
     // Insert data into database using prepared statements
     $sql = "INSERT INTO tabel_pasien (nis, nama, kelas, tgl_lahir, alamat) VALUES (?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($koneksi, $sql);
-    mysqli_stmt_bind_param($stmt, "sssss", $nis, $nama, $kelas, $tgl_lahir, $alamat);
-    $result = mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_param($stmt, 'sssss', $nis, $nama, $kelas, $tgl_lahir, $alamat);
 
+    $result = mysqli_stmt_execute($stmt);
     // Check if insert was successful and redirect or show error message
     if ($result) {
         echo "<script>window.location.assign('?page=pasien&actions=tampil');</script>";
     } else {
-        echo "<script>alert('Simpan Data Gagal');</script>";
+        echo $result;
+        var_dump($result);
+        
     }
 }
 
