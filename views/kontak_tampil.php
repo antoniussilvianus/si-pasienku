@@ -8,10 +8,10 @@
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
-                            <label class="col-sm-12 control-label"><center><strong>Hospital</strong></center></label>
+                            <label class="col-sm-12 control-label"><center><strong>KES 81 KOPASSUS</strong></center></label>
                             <p align="center">
-                            Hospital Batubara beralamat di batubara<br>
-                             Kab. batubara, Sumatera Utara, dengan kode pos 21184.
+                            Kesehatan Sat 81 Kopassus<br>
+                             Jl R.A Fadhillah , Cijantung , Jakarta Timur
                             </p>
                         </thead>
                         <tbody>

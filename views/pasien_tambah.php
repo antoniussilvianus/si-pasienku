@@ -47,7 +47,7 @@
 
                         <!--Status-->
 
-                    <!--    <div class="form-group">
+                       <!-- <div class="form-group">
                             <label for="status" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
 								<select name="status" class="form-control">
@@ -82,21 +82,29 @@
 </div>
 
 <?php
-if($_POST){
-    //Ambil data dari form
-	$niss=$_POST['nis'];
-	$namas=$_POST['nama'];
-	$kelass=$_POST['kelas'];
-    $tgl_lahirs=$_POST['tgl_lahir'];
-	$alamats=$_POST['alamat'];
-     //buat sql
-    $sql="INSERT INTO tabel_pasien VALUES ('$niss','$namas','$kelass','$tgl_lahirs','$alamats','')";
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Setoran Error");
-    if ($query){
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    // Get input data from form
+    $nis = $_POST['nis'];
+    $nama = $_POST['nama'];
+    $kelas = $_POST['kelas'];
+    $tgl_lahir = $_POST['tgl_lahir'];
+    $alamat = $_POST['alamat'];
+
+    // Validate input data
+    // ...
+var_dump($sql,$stmt,$result);die;
+    // Insert data into database using prepared statements
+    $sql = "INSERT INTO tabel_pasien (nis, nama, kelas, tgl_lahir, alamat) VALUES (?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($koneksi, $sql);
+    mysqli_stmt_bind_param($stmt, "sssss", $nis, $nama, $kelas, $tgl_lahir, $alamat);
+    $result = mysqli_stmt_execute($stmt);
+
+    // Check if insert was successful and redirect or show error message
+    if ($result) {
         echo "<script>window.location.assign('?page=pasien&actions=tampil');</script>";
-    }else{
-        echo "<script>alert('Simpan Data Gagal');<script>";
+    } else {
+        echo "<script>alert('Simpan Data Gagal');</script>";
     }
-    }
+}
 
 ?>

@@ -28,7 +28,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports <span class="caret"></span></a>
                     <ul class="dropdown-menu">  
                         <li><a href="?page=pasien&actions=report">Laporan Data Pasien</a></li>
-						            <!-- <li><a href="?page=absensi&actions=report">Laporan Absensi</a></li> -->
+						            <li><a href="?page=absensi&actions=report">Laporan Absensi</a></li>
                     </ul>
                 </li>
                 <li><a href="?page=user&actions=tampil">User</a></li>
