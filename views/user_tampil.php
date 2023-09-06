@@ -25,6 +25,9 @@ if (!isset($_SESSION['idsesi'])) {
                                 <th>Keterangan</th>
                                 <th>AKSI</th>
                             </tr>
+                            <a href="?page=user&actions=tambah" class="btn btn-info btn-sm">
+                                        Tambah Data User
+                            </a>
                             <!--ambil data dari database, dan tampilkan kedalam tabel-->
                             <?php
                             //buat sql untuk tampilan data, gunakan kata kunci select
