@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION ['idsesi'])) {
+if (!isset($_SESSION['idsesi'])) {
     echo "<script> window.location.assign('../index.php'); </script>";
 }
 ?>
@@ -16,7 +16,7 @@ if(!isset($_SESSION ['idsesi'])) {
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Nik</th> 
+                                <th>Nik</th>
                                 <th>Nama Pasien</th>
                                 <th>No.Hp</th>
                                 <th>Tanggal Lahir</th>
@@ -38,7 +38,7 @@ if(!isset($_SESSION ['idsesi'])) {
                             //Melakukan perulangan u/menampilkan data
                             while ($data = mysqli_fetch_array($query)) {
                                 $nomor++; //Penambahan satu untuk nilai var nomor
-                                ?>
+                            ?>
                                 <tr>
                                     <td><?= $nomor ?></td>
                                     <td><?= $data['nis'] ?></td>
@@ -53,7 +53,7 @@ if(!isset($_SESSION ['idsesi'])) {
                                         <a href="?page=pasien&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-									    <a href="?page=pasien&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=pasien&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
@@ -78,4 +78,3 @@ if(!isset($_SESSION ['idsesi'])) {
         </div>
     </div>
 </div>
-

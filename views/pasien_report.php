@@ -14,7 +14,9 @@
                                 <th>Nama Pasien</th>
                                 <th width="15%">No.Hp</th>
                                 <th width="15%">Tanggal Lahir</th>
-                                <th width="14%"><center>Alamat</center></th>
+                                <th width="14%">
+                                    <center>Alamat</center>
+                                </th>
                                 <th>AKSI</th>
                             </tr>
                         </thead>
@@ -32,7 +34,7 @@
                             //Melakukan perulangan u/menampilkan data
                             while ($data = mysqli_fetch_array($query)) {
                                 $nomor++; //Penambahan satu untuk nilai var nomor
-                                ?>
+                            ?>
                                 <tr>
                                     <td><?= $nomor ?></td>
                                     <td><?= $data['nis'] ?></td>
@@ -45,8 +47,8 @@
                                             <span class="fa fa-print"></span>
                                         </a>
 
-                                   
-                                        </td>
+
+                                    </td>
                                 </tr>
                                 <!--Tutup Perulangan data-->
                             <?php } ?>
@@ -68,4 +70,3 @@
         </div>
     </div>
 </div>
-

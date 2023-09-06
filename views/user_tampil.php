@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION ['idsesi'])) {
+if (!isset($_SESSION['idsesi'])) {
     echo "<script> window.location.assign('../index.php'); </script>";
 }
 ?>
@@ -17,9 +17,14 @@ if(!isset($_SESSION ['idsesi'])) {
 
                         </thead>
                         <tbody>
-                          <tr>
-                              <th>No.</th><th>Nama User</th><th>Username</th><th>Email</th><th>Keterangan</th><th>AKSI</th>
-                          </tr>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama User</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Keterangan</th>
+                                <th>AKSI</th>
+                            </tr>
                             <!--ambil data dari database, dan tampilkan kedalam tabel-->
                             <?php
                             //buat sql untuk tampilan data, gunakan kata kunci select
@@ -33,12 +38,12 @@ if(!isset($_SESSION ['idsesi'])) {
                             //Melakukan perulangan u/menampilkan data
                             while ($data = mysqli_fetch_array($query)) {
                                 $nomor++; //Penambahan satu untuk nilai var nomor
-                                ?>
+                            ?>
                                 <tr>
                                     <td><?= $nomor ?></td>
-									                  <td><?= $data['nama'] ?></td>
-									                  <td><?= $data['username'] ?></td>
-									                  <td><?= $data['email'] ?></td>
+                                    <td><?= $data['nama'] ?></td>
+                                    <td><?= $data['username'] ?></td>
+                                    <td><?= $data['email'] ?></td>
                                     <td><?= $data['ket'] ?> </td>
                                     <td>
                                         <a href="?page=user&actions=edit&uid=<?= $data['username'] ?>" class="btn btn-warning btn-xs">

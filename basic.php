@@ -1,13 +1,13 @@
 <?php
 
 //Deklarasi variabel dan pemberian nilai
-$nama="Dini";//tipe string
-$umur=20; //tipe integer
-$status=true; //tipe boolean
+$nama = "Dini"; //tipe string
+$umur = 20; //tipe integer
+$status = true; //tipe boolean
 
 // Menampilkan data ke output dari variabel
 echo "Nama : $nama <br>";
-echo "Umur : ".$umur." <br>";
+echo "Umur : " . $umur . " <br>";
 
 print "status : $status <br>";
 
@@ -52,23 +52,22 @@ print "status : $status <br>";
  *  
  */
 
-$nilai=81;
+$nilai = 81;
 //menggunakan if
-if($nilai==80){
+if ($nilai == 80) {
     echo "Nilai Anda A, Anda Lulus";
 }
-if($nilai==80){
+if ($nilai == 80) {
     echo "Nilai Anda A, Anda Lulus";
-}else{
+} else {
     echo "Nilai Anda A+";
-    
 }
 
 //Menggunakan perulangan
 //Menampilkan data sebanyak 100 kali
-for($i=0;$i<=100;$i++){
+for ($i = 0; $i <= 100; $i++) {
     echo "Data sekarang : $i<br>";
 }
-for($i=100;$i>=0;$i--){
+for ($i = 100; $i >= 0; $i--) {
     echo "Data sekarang : $i<br>";
 }

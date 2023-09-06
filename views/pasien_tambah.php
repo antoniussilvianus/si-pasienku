@@ -101,6 +101,4 @@ if ($_POST) {
         echo "Error: " . $sql . "<br>" . mysqli_error($koneksi);
     }
     mysqli_close($koneksi);
-
-    
 }

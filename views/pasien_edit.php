@@ -1,6 +1,6 @@
 <?php
 $id = $_GET['id'];
-$ambil = mysqli_query($koneksi, "SELECT * FROM tabel_pasien WHERE id ='$id'") or die ("SQL Edit error");
+$ambil = mysqli_query($koneksi, "SELECT * FROM tabel_pasien WHERE id ='$id'") or die("SQL Edit error");
 $data = mysqli_fetch_array($ambil);
 ?>
 <div class="container">
