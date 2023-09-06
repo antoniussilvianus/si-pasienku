@@ -8,7 +8,7 @@
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
-                            <p align="center"><img src="img/puskesmas.png"></img></p>
+                            <p align="center"><img src="img/gultor.png"></img></p>
                             <label class="col-sm-12 control-label"><center><strong>SISTEM INFORMASI INPUT PASIEN</strong></center></label>
                         </thead>
                         <tbody>

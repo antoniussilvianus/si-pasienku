@@ -16,7 +16,7 @@
                     <!--dalam tabel--->
                     <div class="text-center">
                         <h2>Sistem Informasi Input Pasien</h2>
-                        <h4>Batu bara, <br> Kab. Batubara, Sumatera Utara, dengan kode pos 21184.</h4>
+                        <h4>Cijantung , Jakarta Timur<br></h4>
                         <hr>
                         <h3>DATA SELURUH Pasien</h3>
                         <table class="table table-bordered table-striped table-hover"> 
@@ -56,10 +56,10 @@
                             <tfoot> 
                                 <tr>
                                 <td colspan="2" class="text-Right">
-                                        Batu Bara  <?= date("d-m-Y") ?>
+                                        Jakarta <?= date("d-m-Y") ?>
                                         <br><br><br><br>
-                                        <u>Dr.Hamlun<strong></u><br>
-                                        NIP.12345678919
+                                        <u>Dr.Cokorda Gede Bagus Putra<strong></u><br>
+                                        Lettu Ckm NRP : 11190028790692
 								</td>
 								</tr>
 							</tfoot> 

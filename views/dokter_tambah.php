@@ -90,13 +90,14 @@ if($_POST){
     $tgl_lahirs=$_POST['tgl_lahir'];
 	$alamats=$_POST['alamat'];
      //buat sql
-    $sql="INSERT INTO tabel_dokter VALUES ('$niss','$namas','$kelass','$tgl_lahirs','$alamats','')";
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Setoran Error");
-    if ($query){
-        echo "<script>window.location.assign('?page=dokter&actions=tampil');</script>";
-    }else{
-        echo "<script>alert('Simpan Data Gagal');<script>";
-    }
+     $sql = "INSERT INTO tabel_dokter (nis, nama, kelas, tgl_lahir, alamat) 
+     VALUES ('$niss', '$namas', '$kelass', '$tgl_lahirs', '$alamats')";
+if (mysqli_query($koneksi, $sql)) {
+ echo "New record created successfully";
+} else {
+ echo "Error: " . $sql . "<br>" . mysqli_error($koneksi);
+}
+mysqli_close($koneksi);
     }
 
 ?>
