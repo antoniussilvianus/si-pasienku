@@ -95,7 +95,8 @@ if ($_POST) {
     $sql = "INSERT INTO tabel_pasien (nis, nama, kelas, tgl_lahir, alamat) 
             VALUES ('$niss', '$namas', '$kelass', '$tgl_lahirs', '$alamats')";
     if (mysqli_query($koneksi, $sql)) {
-        echo "New record created successfully";
+        echo "<script>alert('Data berhasil dibuat');</script>";
+        echo "<script>window.location.assign('?page=pasien&actions=tampil');</script>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($koneksi);
     }
