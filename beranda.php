@@ -75,7 +75,8 @@
 
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Log-in Here</h3>
+                        
+                        <h3 class="panel-title"><i class="fa fa-user-secret"></i>Log-in Here</h3>
                     </div>
                     <div class="panel-body">
                         <form class="form-horizontal" action="proses_login.php" method="post">
@@ -92,8 +93,8 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <button type="submit" name="login" value="login" class="btn btn-success btn-block"><span class="fa fa-unlock-alt"></span>
-                                        Login Sistem
+                                    <button type="submit" name="login" value="login" class="btn btn-success btn-block"><span class="fa fa-user"></span>
+                                        Log-in Disini
                                     </button>
                                 </div>
                         </form>
