@@ -70,26 +70,26 @@ if ($_POST) {
     $pass = $_POST['paswd'];
     $email = $_POST['email'];
     $keterangan = $_POST['ket'];
-    
+
     // Buat koneksi ke database
-    $koneksi= mysqli_connect("localhost","root","","pasien");
-    
+    $koneksi = mysqli_connect("localhost", "root", "", "pasien");
+
     // Periksa koneksi
     if (!$koneksi) {
         die("Koneksi gagal: " . mysqli_connect_error());
     }
-    
+
     // Buat SQL query
     $sql = "INSERT INTO user (username, paswd, email, nama, level, ket) 
             VALUES ('$username', '$pass', '$email', '$nama', 'level_value', '$keterangan')";
-    
+
     if (mysqli_query($koneksi, $sql)) {
         echo "<script>alert('Data berhasil dibuat');</script>";
         echo "<script>window.location.assign('?page=user&actions=tampil');</script>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($koneksi);
     }
-    
+
     // Tutup koneksi ke database
     mysqli_close($koneksi);
 }
