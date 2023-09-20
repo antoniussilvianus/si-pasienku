@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>Cetak Data Siswa</title>
+    <link rel="icon" href="../img/gultor.png">
+    <title>Cetak Semua Data Pasien</title>
     <link href="../Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -20,7 +21,7 @@
                     <h2>Sistem Informasi Input Pasien</h2>
                     <h4>Cijantung , Jakarta Timur<br></h4>
                     <hr>
-                    <h3>DATA SELURUH Pasien</h3>
+                    <h3>Data Semua Pasien</h3>
                     <table class="table table-bordered table-striped table-hover">
                         <tbody>
                             <thead>
@@ -40,19 +41,12 @@
                                 </tr>
                             </thead>
                         <tbody>
-                            <!--ambil data dari database, dan tampilkan kedalam tabel-->
                             <?php
-                            //buat sql untuk tampilan data, gunakan kata kunci select
                             $sql = "SELECT * FROM tabel_pasien";
                             $query = mysqli_query($koneksi, $sql) or die("SQL Anda Salah");
-                            //Baca hasil query dari databse, gunakan perulangan untuk 
-                            //Menampilkan data lebh dari satu. disini akan digunakan
-                            //while dan fungdi mysqli_fecth_array
-                            //Membuat variabel untuk menampilkan nomor urut
                             $nomor = 0;
-                            //Melakukan perulangan u/menampilkan data
                             while ($data = mysqli_fetch_array($query)) {
-                                $nomor++; //Penambahan satu untuk nilai var nomor
+                                $nomor++;
                             ?>
                                 <tr>
                                     <td><?= $nomor ?></td>
@@ -62,7 +56,6 @@
                                     <td><?= $data['tgl_lahir'] ?></td>
                                     <td><?= $data['alamat'] ?></td>
                                 </tr>
-                                <!--Tutup Perulangan data-->
                             <?php } ?>
                         </tbody>
                         </tbody>

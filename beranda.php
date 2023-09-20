@@ -7,7 +7,6 @@
 
     <div class="row">
         <!--colomn kedua-->
-
         <div class="col-sm-9 col-xs-12">
             <!--  <img src="img/dinas_lh.png" style="max-width:100%; height:150px;"> -->
             <div class="panel panel-default">

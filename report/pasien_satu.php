@@ -2,25 +2,22 @@
 <html>
 
 <head>
+    <link rel="icon" href="../img/gultor.png">
     <title>Cetak Data Pasien</title>
     <link href="../Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="print()">
-    <!--Menampilkan data detail arsip-->
     <?php
     include '../config/koneksi.php';
     $sql = "SELECT * FROM tabel_pasien WHERE id='" . $_GET['id'] . "'";
-    //proses query ke database
     $query = mysqli_query($koneksi, $sql) or die("SQL Detail error");
-    //Merubaha data hasil query kedalam bentuk array
     $data = mysqli_fetch_array($query);
     ?>
 
     <div class="container">
         <div class='row'>
             <div class="col-sm-12">
-                <!--dalam tabel--->
                 <div class="text-center">
                     <h2>Sistem Informasi</h2><br>INPUT PASIEN
                     <hr>
